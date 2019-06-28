@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <input type="number" name="money" id="money">
+        <select id="from">
+            <option value="vietnamDong">Việt Nam Đồng</option>
+            <option value="dollarUs">Đô la Mỹ</option>
+          </select>
+          <select id="to">
+            <option value="vietnamDong">Việt Nam Đồng</option>
+            <option value="dollarUs">Đô la Mỹ</option>
+          </select>
+        <button type="button" onclick="doiTien()">Submit</button>
+        <p>Kết Quả: </p>
+    <p id="result"></p>
+        <script>
+           function doiTien() {
+            let money = parseInt(document.getElementById("money").value);
+            let from = document.getElementById("from").value;
+            let to = document.getElementById("to").value;
+            let result;
+                if( from == "vietnamDong" && to == "dollarUs"){
+                    result = money/23000;
+                    document.getElementById("result").innerHTML = result;}
+                if( from == "dollarUs" && to == "vietnamDong"){
+                    result = money*23000;
+                    document.getElementById("result").innerHTML = result;
+                }else{
+                    document.getElementById("result").innerHTML = "Kiểm tra lại tiền tệ";
+           }
+           }
+        </script>
+    </body>
+</html>

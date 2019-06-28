@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <input type="text" name="celsius" id="celsius">
+        <button type="button" onclick="temperature()">Submit</button>
+        <script>
+            function temperature() {
+            var celsius =document.getElementById("celsius").value;
+            var fahrenheit =0;
+            fahrenheit= (9*celsius)/5 +32;
+            document.write(fahrenheit);
+            console.log(celsius);
+            console.log(fahrenheit);
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html>
+   <body>
+      <h3>MÁY TÍNH ĐƠN GIẢN</h3>
+      <table>
+           <tr>
+               <td><input type="number" id="so1"</td>
+               <td><input type="number" id="so2"</td>
+           </tr>
+       </table>
+       <table>
+           <tr>
+               <td><button type="button" onclick="phepcong()">Cộng  (+)</button></td>
+               <td><button type="button" onclick="pheptru()">Trừ  (-)</button></td>
+               <td><button type="button" onclick="phepnhan()">Nhân  (X)</button></td>
+               <td><button type="button" onclick="phepchia()">Chia  (/)</button></td>
+          </tr>
+       </table>
+       <table>
+           <tr>
+               <td><b>Kết quả phép tính</b>   <input type="text" id="result" disabled>
+           </tr>
+       </table>
+       <script>
+               function phepcong(){
+                   var so1 = parseInt(document.getElementById("so1").value);
+                   var so2 = parseInt(document.getElementById("so2").value);
+                   document.getElementById("result").value = so1+so2;
+               }
+               function pheptru(){
+                   var so1 = parseInt(document.getElementById("so1").value);
+                   var so2 = parseInt(document.getElementById("so2").value);
+                   document.getElementById("result").value = so1-so2;
+               }
+               function phepnhan(){
+                   var so1 = parseInt(document.getElementById("so1").value);
+                   var so2 = parseInt(document.getElementById("so2").value);
+                   document.getElementById("result").value = so1*so2;
+               }
+               function phepchia(){
+                   var so1 = parseInt(document.getElementById("so1").value);
+                   var so2 = parseInt(document.getElementById("so2").value);
+                   document.getElementById("result").value = so1/so2;
+               }
+       </script>
+   </body>
+</html>

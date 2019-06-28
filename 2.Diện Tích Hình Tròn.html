@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html><body>
+   Bán Kính
+   <input type="text" id="a">
+   <button type="button" onclick="dienTich()">Submit</button>
+    <p>Diện Tích Hình Tròn: </p><p id="result"></p>
+   <script>
+       function dienTich() {
+        var a = parseInt(document.getElementById("a").value);
+        let result = (a * a * 3.14); 
+         document.getElementById("result").innerHTML = result;
+        }
+</script>
+</body>
+</html>

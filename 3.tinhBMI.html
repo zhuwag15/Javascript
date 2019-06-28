@@ -1,0 +1,36 @@
+<!DOCTYPE
+<html>
+<body>
+    Nhập số cần tính
+    <div>
+        Cân Nặng
+        <input type="text" name="Cân Nặng"id="w">
+        Chiều Cao
+        <input type="text" name="Chiều Cao" id="h">
+        Độ Tuổi
+        <input type="text" name="Độ Tuổi" id="e">
+    </div>
+    <div>
+        <button type="button" onclick="tySo()">Kết Quả</button>
+    </div>
+    <p>Kết Quả: </p>
+    <p id="result"></p>
+    <p>Trạng thái: </p>
+    <p id="status"></p>
+    <script>
+        function tySo() {
+            let e = parseFloat(document.getElementById("e").value)
+            if (e <= 20){
+            document.getElementById("status").innerHTML = "Số Tuổi Chưa Phù Hợp";
+            } else {
+            let w = parseFloat(document.getElementById("w").value);
+            let h = parseFloat(document.getElementById("h").value);
+            let e = parseFloat(document.getElementById("e").value);
+            let result = w / (Math.pow(h,2));
+            document.getElementById("result").innerHTML = result;
+            document.getElementById("status").innerHTML = "ko biet";
+            }
+        }
+    </script>
+</body>
+</html>

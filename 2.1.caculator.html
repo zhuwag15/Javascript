@@ -1,0 +1,44 @@
+<!DOCTYPE
+<html>
+<body>
+    Nhập số cần tính
+    <div>
+        <input type="text" id="a">
+        <input type="text" id="b">
+    </div>
+    <div>
+        <button type="button" onclick="phepCong()">Cong</button>
+        <button type="button" onclick="phepTru()">Tru</button>
+        <button type="button" onclick="phepNhan()">Nhan</button>
+        <button type="button" onclick="phepChia()">Chia</button>
+    </div>
+    <p>Kết Quả: </p>
+    <p id="result"></p>
+    <script>
+        function phepCong() {
+            var a = parseFloat(document.getElementById("a").value);
+            var b = parseFloat(document.getElementById("b").value);
+            let result = (a + b);
+            document.getElementById("result").innerHTML = result;
+        }
+        function phepTru() {
+            var a = parseFloat(document.getElementById("a").value);
+            var b = parseFloat(document.getElementById("b").value);
+            let result = (a - b);
+            document.getElementById("result").innerHTML = result;
+        }
+        function phepNhan() {
+            var a = parseFloat(document.getElementById("a").value);
+            var b = parseFloat(document.getElementById("b").value);
+            let result = (a * b);
+            document.getElementById("result").innerHTML = result;
+        }
+        function phepChia() {
+            var a = parseFloat(document.getElementById("a").value);
+            var b = parseFloat(document.getElementById("b").value);
+            let result = (a / b);
+            document.getElementById("result").innerHTML = result;
+        }
+    </script>
+</body>
+</html>
